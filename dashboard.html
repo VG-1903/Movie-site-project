@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieDB - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="navbar-brand">MovieDB</a>
+        
+        <div class="genre-dropdown">
+            <button class="dropdown-btn">Genres</button>
+            <div class="dropdown-content">
+                <a href="#" data-genre="Action">Action</a>
+                <a href="#" data-genre="Adventure">Adventure</a>
+                <a href="#" data-genre="Animation">Animation</a>
+                <a href="#" data-genre="Biography">Biography</a>
+                <a href="#" data-genre="Comedy">Comedy</a>
+                <a href="#" data-genre="Crime">Crime</a>
+                <a href="#" data-genre="Documentary">Documentary</a>
+                <a href="#" data-genre="Drama">Drama</a>
+                <a href="#" data-genre="Fantasy">Fantasy</a>
+                <a href="#" data-genre="Horror">Horror</a>
+                <a href="#" data-genre="Mystery">Mystery</a>
+                <a href="#" data-genre="Romance">Romance</a>
+                <a href="#" data-genre="Sci-Fi">Sci-Fi</a>
+                <a href="#" data-genre="Thriller">Thriller</a>
+            </div>
+        </div>
+        
+        <div class="navbar-menu">
+            <a href="dashboard.html">Home</a>
+            <a href="#" id="favorites-link">My Favorites</a>
+            <a href="#" id="rated-link">My Ratings</a>
+        </div>
+        
+        <div class="navbar-user">
+            <span class="user-name" id="user-name">Welcome, User</span>
+            <button id="logout-btn" class="btn-logout">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="dashboard-header">
+            <h1 class="dashboard-title" id="page-title">Movie Dashboard</h1>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search for movies...">
+                <button id="search-btn">Search</button>
+            </div>
+        </div>
+        
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-item">
+                <label for="rating-filter">Min Rating:</label>
+                <select id="rating-filter">
+                    <option value="0">Any</option>
+                    <option value="5">5+</option>
+                    <option value="6">6+</option>
+                    <option value="7">7+</option>
+                    <option value="8">8+</option>
+                    <option value="9">9+</option>
+                </select>
+            </div>
+            
+            <div class="filter-item">
+                <label for="year-filter">Year:</label>
+                <select id="year-filter">
+                    <option value="">Any</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Movie Grid Container -->
+        <div id="movie-container" class="movie-grid">
+            <div class="loading">Loading movies...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
